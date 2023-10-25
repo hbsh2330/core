@@ -12,9 +12,9 @@ public class MemberServiceImp implements MemberService{
     public void join(Member member) {
         memberRepository.save(member);
     }
-// 2. 회원조회 로직 memberId 입력시 memberRepository에 있는 findByid 메서드 호출
+
+    // 2. 회원조회 로직 memberId 입력시 memberRepository에 있는 findByid 메서드 호출
     @Override
-    public Member findMember(Long memberId) {
-        return memberRepository.findById(memberId);
-    }
+    public Member findMember(Long memberId) {return memberRepository.findById(memberId);}
+
 }
